@@ -9,11 +9,11 @@
     <!-- tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- daisyUI -->
-    <link
+    <!-- <link
       href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css"
       rel="stylesheet"
       type="text/css"
-    />
+    /> -->
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -55,7 +55,7 @@
               <p class="mt-4 text-gray-500">35 Goals 120 Assist</p>
               <button
                 onclick="addToCart(this)"
-                class="mt-4 btn btn-primary w-full text-center"
+                class="mt-4 bg-blue-700 text-white rounded-lg py-2 w-full text-center disabled:opacity-20"
               >
                 SELECT
               </button>
@@ -68,7 +68,7 @@
               <p class="mt-4 text-gray-500">35 Goals 120 Assist</p>
               <button
                 onclick="addToCart(this)"
-                class="mt-4 btn btn-primary w-full text-center"
+                class="mt-4 bg-blue-700 text-white rounded-lg py-2 w-full text-center disabled:opacity-20"
               >
                 SELECT
               </button>
@@ -81,7 +81,7 @@
               <p class="mt-4 text-gray-500">35 Goals 120 Assist</p>
               <button
                 onclick="addToCart(this)"
-                class="mt-4 btn btn-primary w-full text-center"
+                class="mt-4 bg-blue-700 text-white rounded-lg py-2 w-full text-center disabled:opacity-20"
               >
                 SELECT
               </button>
@@ -94,7 +94,7 @@
               <p class="mt-4 text-gray-500">35 Goals 120 Assist</p>
               <button
                 onclick="addToCart(this)"
-                class="mt-4 btn btn-primary w-full text-center"
+                class="mt-4 bg-blue-700 text-white rounded-lg py-2 w-full text-center disabled:opacity-20"
               >
                 SELECT
               </button>
@@ -107,7 +107,7 @@
               <p class="mt-4 text-gray-500">35 Goals 120 Assist</p>
               <button
                 onclick="addToCart(this)"
-                class="mt-4 btn btn-primary w-full text-center"
+                class="mt-4 bg-blue-700 text-white rounded-lg py-2 w-full text-center disabled:opacity-20"
               >
                 SELECT
               </button>
@@ -120,7 +120,7 @@
               <p class="mt-4 text-gray-500">35 Goals 120 Assist</p>
               <button
                 onclick="addToCart(this)"
-                class="mt-4 btn btn-primary w-full text-center"
+                class="mt-4 bg-blue-700 text-white rounded-lg py-2 w-full text-center disabled:opacity-20"
               >
                 SELECT
               </button>
@@ -141,6 +141,9 @@
                 </tbody>
               </table>
             </div>
+            <p id="player-error" class="text-red-600 hidden">
+              You can select only 5 players
+            </p>
           </div>
           <!-- calculation -->
           <div class="bg-[#000]"></div>
