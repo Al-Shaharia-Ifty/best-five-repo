@@ -35,3 +35,15 @@ function calculate() {
   const totalExpenses = perPlayerNumber * players.length;
   playerExpenses.innerText = totalExpenses;
 }
+function calculateTotal() {
+  calculate();
+  const playerExpenses = document.getElementById("Player-expenses").innerText;
+  const total = document.getElementById("total");
+  const manager = document.getElementById("manager").value;
+  const coach = document.getElementById("coach").value;
+  const managerNumber = parseInt(manager);
+  const coachNumber = parseInt(coach);
+  const expensesNumber = parseInt(playerExpenses);
+  const totalAmount = managerNumber + coachNumber + expensesNumber;
+  total.innerText = totalAmount;
+}

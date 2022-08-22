@@ -167,6 +167,34 @@
                 <p class="text-sm">Player Expenses</p>
                 <p class="ml-3 text-sm">$ <span id="Player-expenses"></span></p>
               </div>
+              <div class="flex mt-8">
+                <p class="w-40">Manager</p>
+                <input
+                  id="manager"
+                  class="ml-4 w-full text-black px-3"
+                  type="number"
+                />
+              </div>
+              <div class="flex mt-8">
+                <p class="w-40">Coach</p>
+                <input
+                  id="coach"
+                  class="ml-4 w-full text-black px-3"
+                  type="number"
+                />
+              </div>
+              <button
+                onclick="calculateTotal()"
+                class="mt-4 bg-blue-700 rounded-lg py-2 w-full text-center"
+              >
+                Calculate Total
+              </button>
+              <div class="flex justify-between mt-4">
+                <p class="text-sm">Total</p>
+                <p class="ml-3 text-orange-500 text-sm">
+                  $ <span id="total">0</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
