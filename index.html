@@ -49,7 +49,7 @@
         <!-- player -->
         <div class="grid grid-cols-3 col-span-3 gap-4">
           <div class="bg-[#000000]">
-            <img class="" src="Images/lional-messi (1).jpg" alt="" />
+            <img class="w-full" src="Images/lional-messi (1).jpg" alt="" />
             <div class="m-4 text-center">
               <h2 class="text-white text-center">Lionel Messi</h2>
               <p class="mt-4 text-gray-500">35 Goals 120 Assist</p>
@@ -62,7 +62,7 @@
             </div>
           </div>
           <div class="bg-[#000000]">
-            <img class="" src="Images/neymer (1).jpg" alt="" />
+            <img class="w-full" src="Images/neymer (1).jpg" alt="" />
             <div class="m-4 text-center">
               <h2 class="text-white text-center">Neymar Jr</h2>
               <p class="mt-4 text-gray-500">35 Goals 120 Assist</p>
@@ -75,7 +75,7 @@
             </div>
           </div>
           <div class="bg-[#000000]">
-            <img class="" src="Images/mbappe.jpg" alt="" />
+            <img class="w-full" src="Images/mbappe.jpg" alt="" />
             <div class="m-4 text-center">
               <h2 class="text-white text-center">Kylian Mbappé</h2>
               <p class="mt-4 text-gray-500">35 Goals 120 Assist</p>
@@ -88,7 +88,7 @@
             </div>
           </div>
           <div class="bg-[#000000]">
-            <img class="" src="Images/Sergio Ramos.jpg" alt="" />
+            <img class="w-full" src="Images/Sergio Ramos.jpg" alt="" />
             <div class="m-4 text-center">
               <h2 class="text-white text-center">Sergio Ramos</h2>
               <p class="mt-4 text-gray-500">35 Goals 120 Assist</p>
@@ -101,7 +101,7 @@
             </div>
           </div>
           <div class="bg-[#000000]">
-            <img class="" src="Images/Renato Sanches.jpg" alt="" />
+            <img class="w-full" src="Images/Renato Sanches.jpg" alt="" />
             <div class="m-4 text-center">
               <h2 class="text-white text-center">Renato Sanches</h2>
               <p class="mt-4 text-gray-500">35 Goals 120 Assist</p>
@@ -114,9 +114,9 @@
             </div>
           </div>
           <div class="bg-[#000000]">
-            <img class="" src="Images/ronaldo (1).jpg" alt="" />
+            <img class="w-full" src="Images/ronaldo (1).jpg" alt="" />
             <div class="m-4 text-center">
-              <h2 class="text-white text-center">Ronaldo</h2>
+              <h2 class="text-white text-center">Cristiano Ronaldo</h2>
               <p class="mt-4 text-gray-500">35 Goals 120 Assist</p>
               <button
                 onclick="addToCart(this)"
@@ -141,12 +141,34 @@
                 </tbody>
               </table>
             </div>
-            <p id="player-error" class="text-red-600 hidden">
+            <p id="player-error" class="text-red-600 hidden text-center">
               You can select only 5 players
             </p>
           </div>
           <!-- calculation -->
-          <div class="bg-[#000]"></div>
+          <div class="bg-[#000]">
+            <div class="mx-4 text-white">
+              <h2 class="text-center mt-8 text-2xl">Budget</h2>
+              <div class="flex mt-8">
+                <p class="w-40">Per Player</p>
+                <input
+                  id="per-player"
+                  class="ml-4 w-full text-black px-3"
+                  type="number"
+                />
+              </div>
+              <button
+                onclick="calculate()"
+                class="mt-4 bg-blue-700 rounded-lg py-2 w-full text-center"
+              >
+                Calculate
+              </button>
+              <div class="flex mt-4">
+                <p class="text-sm">Player Expenses</p>
+                <p class="ml-3 text-sm">$ <span id="Player-expenses"></span></p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>

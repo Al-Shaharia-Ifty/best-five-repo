@@ -1,22 +1,17 @@
 const players = [];
 
 function displayPlayer() {
-  if (players.length < 6) {
-    const allPlayer = document.getElementById("player-name");
-    allPlayer.textContent = "";
+  const allPlayer = document.getElementById("player-name");
+  allPlayer.textContent = "";
 
-    for (let i = 0; i < players.length; i++) {
-      const tr = document.createElement("tr");
-      tr.className = "mt-10 text-white";
-      tr.innerHTML = `
+  for (let i = 0; i < players.length; i++) {
+    const tr = document.createElement("tr");
+    tr.className = "mt-10 text-white";
+    tr.innerHTML = `
           <td class="text-xl">${i + 1}.</td>
           <td class="text-lg pl-4">${players[i]}</td>
               `;
-      allPlayer.appendChild(tr);
-    }
-  } else {
-    const errorMessage = document.getElementById("player-error");
-    errorMessage.style.display = "block";
+    allPlayer.appendChild(tr);
   }
 }
 
@@ -25,8 +20,18 @@ function addToCart(element) {
   const button = element.parentNode.children[2];
   if (players.length < 5) {
     button.disabled = true;
-    console.log(button);
     players.push(playerName);
     displayPlayer();
+  } else {
+    const errorMessage = document.getElementById("player-error");
+    errorMessage.style.display = "block";
   }
+}
+
+function calculate() {
+  const perPlayerInput = document.getElementById("per-player").value;
+  const playerExpenses = document.getElementById("Player-expenses");
+  const perPlayerNumber = parseInt(perPlayerInput);
+  const totalExpenses = perPlayerNumber * players.length;
+  playerExpenses.innerText = totalExpenses;
 }
