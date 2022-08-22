@@ -46,13 +46,17 @@
     <!-- main -->
     <main>
       <div class="mt-20 mx-40 grid grid-cols-4 gap-4">
+        <!-- player -->
         <div class="grid grid-cols-3 col-span-3 gap-4">
           <div class="bg-[#000000]">
             <img class="" src="Images/lional-messi (1).jpg" alt="" />
             <div class="m-4 text-center">
               <h2 class="text-white text-center">Lionel Messi</h2>
               <p class="mt-4 text-gray-500">35 Goals 120 Assist</p>
-              <button class="mt-4 btn btn-primary w-full text-center">
+              <button
+                onclick="addToCart(this)"
+                class="mt-4 btn btn-primary w-full text-center"
+              >
                 SELECT
               </button>
             </div>
@@ -62,7 +66,10 @@
             <div class="m-4 text-center">
               <h2 class="text-white text-center">Neymar Jr</h2>
               <p class="mt-4 text-gray-500">35 Goals 120 Assist</p>
-              <button class="mt-4 btn btn-primary w-full text-center">
+              <button
+                onclick="addToCart(this)"
+                class="mt-4 btn btn-primary w-full text-center"
+              >
                 SELECT
               </button>
             </div>
@@ -72,7 +79,10 @@
             <div class="m-4 text-center">
               <h2 class="text-white text-center">Kylian Mbappé</h2>
               <p class="mt-4 text-gray-500">35 Goals 120 Assist</p>
-              <button class="mt-4 btn btn-primary w-full text-center">
+              <button
+                onclick="addToCart(this)"
+                class="mt-4 btn btn-primary w-full text-center"
+              >
                 SELECT
               </button>
             </div>
@@ -82,7 +92,10 @@
             <div class="m-4 text-center">
               <h2 class="text-white text-center">Sergio Ramos</h2>
               <p class="mt-4 text-gray-500">35 Goals 120 Assist</p>
-              <button class="mt-4 btn btn-primary w-full text-center">
+              <button
+                onclick="addToCart(this)"
+                class="mt-4 btn btn-primary w-full text-center"
+              >
                 SELECT
               </button>
             </div>
@@ -92,7 +105,10 @@
             <div class="m-4 text-center">
               <h2 class="text-white text-center">Renato Sanches</h2>
               <p class="mt-4 text-gray-500">35 Goals 120 Assist</p>
-              <button class="mt-4 btn btn-primary w-full text-center">
+              <button
+                onclick="addToCart(this)"
+                class="mt-4 btn btn-primary w-full text-center"
+              >
                 SELECT
               </button>
             </div>
@@ -102,17 +118,31 @@
             <div class="m-4 text-center">
               <h2 class="text-white text-center">Ronaldo</h2>
               <p class="mt-4 text-gray-500">35 Goals 120 Assist</p>
-              <button class="mt-4 btn btn-primary w-full text-center">
+              <button
+                onclick="addToCart(this)"
+                class="mt-4 btn btn-primary w-full text-center"
+              >
                 SELECT
               </button>
             </div>
           </div>
         </div>
+        <!--  -->
         <div class="grid grid-cols-1 col-span-1 gap-4">
           <div class="bg-[#000]">
             <h2 class="text-center mt-8 text-2xl text-white">Select Five</h2>
-            <div id="selected-player"></div>
+            <div id="selected-player" class="overflow-x-auto mx-8">
+              <table>
+                <tbody id="player-name">
+                  <!-- <tr class="text-white">
+                    <td class="text-xl">1</td>
+                    <td class="text-xl pl-5">messi</td>
+                  </tr> -->
+                </tbody>
+              </table>
+            </div>
           </div>
+          <!-- calculation -->
           <div class="bg-[#000]"></div>
         </div>
       </div>
