@@ -32,6 +32,7 @@ function calculate() {
   const perPlayerInput = document.getElementById("per-player").value;
   const playerExpenses = document.getElementById("Player-expenses");
   const errorMessage = document.getElementById("expenses-error");
+  const errorLength = document.getElementById("length-error");
   if (perPlayerInput) {
     errorMessage.style.display = "none";
     const perPlayerNumber = parseInt(perPlayerInput);
@@ -39,6 +40,11 @@ function calculate() {
     playerExpenses.innerText = totalExpenses;
   } else {
     errorMessage.style.display = "block";
+  }
+  if (players.length === 0) {
+    errorLength.style.display = "block";
+  } else {
+    errorLength.style.display = "none";
   }
 }
 function calculateTotal() {
