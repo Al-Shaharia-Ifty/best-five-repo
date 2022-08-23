@@ -163,6 +163,12 @@
               >
                 Calculate
               </button>
+              <p id="length-error" class="text-red-600 hidden text-center">
+                Please Select Minimum One Plear
+              </p>
+              <p id="expenses-error" class="text-red-600 hidden text-center">
+                Please add Player Expenses
+              </p>
               <div class="flex mt-4">
                 <p class="text-sm">Player Expenses</p>
                 <p class="ml-3 text-sm">$ <span id="Player-expenses"></span></p>
@@ -189,10 +195,13 @@
               >
                 Calculate Total
               </button>
-              <div class="flex justify-between mt-4">
+              <p id="total-error" class="text-red-600 hidden text-center">
+                Please add Input number
+              </p>
+              <div class="flex justify-between my-4">
                 <p class="text-sm">Total</p>
                 <p class="ml-3 text-orange-500 text-sm">
-                  $ <span id="total">0</span>
+                  $ <span id="total"></span>
                 </p>
               </div>
             </div>

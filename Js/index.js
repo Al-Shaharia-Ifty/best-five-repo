@@ -31,19 +31,32 @@ function addToCart(element) {
 function calculate() {
   const perPlayerInput = document.getElementById("per-player").value;
   const playerExpenses = document.getElementById("Player-expenses");
-  const perPlayerNumber = parseInt(perPlayerInput);
-  const totalExpenses = perPlayerNumber * players.length;
-  playerExpenses.innerText = totalExpenses;
+  const errorMessage = document.getElementById("expenses-error");
+  if (perPlayerInput) {
+    errorMessage.style.display = "none";
+    const perPlayerNumber = parseInt(perPlayerInput);
+    const totalExpenses = perPlayerNumber * players.length;
+    playerExpenses.innerText = totalExpenses;
+  } else {
+    errorMessage.style.display = "block";
+  }
 }
 function calculateTotal() {
-  calculate();
   const playerExpenses = document.getElementById("Player-expenses").innerText;
   const total = document.getElementById("total");
   const manager = document.getElementById("manager").value;
   const coach = document.getElementById("coach").value;
-  const managerNumber = parseInt(manager);
-  const coachNumber = parseInt(coach);
-  const expensesNumber = parseInt(playerExpenses);
-  const totalAmount = managerNumber + coachNumber + expensesNumber;
-  total.innerText = totalAmount;
+  const errorMessage = document.getElementById("total-error");
+  console.log(total.innerText);
+  if (manager && coach) {
+    calculate();
+    const managerNumber = parseInt(manager);
+    const coachNumber = parseInt(coach);
+    const expensesNumber = parseInt(playerExpenses);
+    const totalAmount = managerNumber + coachNumber + expensesNumber;
+    total.innerText = totalAmount;
+    errorMessage.style.display = "none";
+  } else {
+    errorMessage.style.display = "block";
+  }
 }
